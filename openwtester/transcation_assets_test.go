@@ -119,9 +119,9 @@ func testSubmitTransactionStep(tm *openw.WalletManager, rawTx *openwallet.RawTra
 func TestTransfer(t *testing.T) {
 
 	targets := []string{
-		"GJuh8BP6rASq2aUB2yo4TQwUKGsCQMhjXg",
-		"GMPsJW45A6eyjz86a8BD7uDUiA1NRhdQKG",
-		"GNG1bTheczenqNyF86Ramr1LNiVVUCbJkg",
+		//"GJuh8BP6rASq2aUB2yo4TQwUKGsCQMhjXg",
+		//"GMPsJW45A6eyjz86a8BD7uDUiA1NRhdQKG",
+		//"GNG1bTheczenqNyF86Ramr1LNiVVUCbJkg",
 		//"GNGkMGAowHXdgbPSR3M1Nuk9VPeiM9YHcL",
 		//"GNxhfr4SmauYTFk1kRE4KGBgcLrZmDhRCf",
 		//"GRfFYvo2zagdRcdHyDn6fpU8NjMrUEwrxd",
@@ -130,6 +130,8 @@ func TestTransfer(t *testing.T) {
 		//"GUNWkq5xDNVUX6EobVbN6ku6oXAR1ZaZF8",
 		//"Gce2makVqDwyURrnGfNC3izB2ebfm3xE41",
 		//"Gf3E2czye3j1WifNr6AEzg1ZKcYiMxnEyg",
+
+		"Gcz5HkT9WURLuofwVjYgqCoSR66QYTnn4U",
 	}
 
 	tm := testInitWalletManager()
@@ -139,7 +141,7 @@ func TestTransfer(t *testing.T) {
 	testGetAssetsAccountBalance(tm, walletID, accountID)
 
 	for _, to := range targets {
-		rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "30", "", nil)
+		rawTx, err := testCreateTransactionStep(tm, walletID, accountID, to, "300", "", nil)
 		if err != nil {
 			return
 		}

@@ -66,7 +66,7 @@ func TestSubscribeAddress(t *testing.T) {
 		symbol     = "G999"
 		addrs      = map[string]string{
 			"GMrAuWpiB3BckcMZF4SDQd3PQGqea6jbno": "sender",
-			"Gf3E2czye3j1WifNr6AEzg1ZKcYiMxnEyg": "receiver",
+			"GNPnYjutBkqPNs8rrKrNLRXt99QpX5tGLh": "receiver",
 		}
 	)
 
@@ -109,7 +109,7 @@ func TestSubscribeAddress(t *testing.T) {
 
 		scanner.SetBlockchainDAI(dai)
 	}
-	scanner.SetRescanBlockHeight(252000)
+	scanner.SetRescanBlockHeight(640787)
 
 	if scanner == nil {
 		log.Error(symbol, "is not support block scan")
